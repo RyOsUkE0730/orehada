@@ -21,7 +21,6 @@
   color: black;
   margin-right: 50px;
   padding-top: 20px;
-  font-weight: bold;
 }
 .login {
   background-color:#556b2f;
@@ -102,6 +101,7 @@ a {
   height: 100%;
   color:#57312D;
   font-weight: bold;
+  font-size: 16px;
 }
 .sign-up:before,.sign-up:after {
   position: absolute;
