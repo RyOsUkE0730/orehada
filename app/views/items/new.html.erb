@@ -1,0 +1,16 @@
+<div class="new-content-body">
+  <div class="new-tweet-form">
+    <h1>自分のオススメを投稿して<br>みんなにシェアしよう！</h1>
+    <div class="create-form">
+    <%= form_with model: @item, local: true do |f| %>
+      <%#= render 'shared/error_messages', model: f.object %>
+
+      <%= f.text_area :title, placeholder: "タイトル", maxlength: "40", class:"new-form-content form-title" %>
+      <%= f.text_area :explanation, placeholder:"詳しい内容（どんな人にオススメか、など）" ,rows:"7" ,maxlength:"1000", class:"new-form-content" %>
+      <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, { class:"new-form-content"}) %>
+      <%= f.file_field :image, class:"image-file" %>
+      <%= f.submit "みんなにシェアする" ,class:"share-btn" %>
+    <% end %>
+    </div>
+  </div>
+</div>
