@@ -5,13 +5,37 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application'%>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,700&display=swap" rel="stylesheet">
   </head>
 
   <body>
+    <header>
+      <div class="header-wrapper">
+        <div class="header-left">
+          <%= link_to image_tag("icon/icon.png", class: :logo), root_path %>
+        </div>
+        <%# if user_signed_in? %>
+          <%#div class="header-right" >
+            <%#= link_to "ログアウト", '#', class:header-link %>
+            <%#= link_to "About", '#', class:header-link %>
+            <%#= link_to "投稿する", '#', class:header-link %>
+            <%#= link_to "投稿を見る", '#', class:header-link %>
+            <%#= link_to "お問い合わせ", '#', class:header-link %>
+          <%#/div>
+        <%# else %>
+          <div class="header-right">
+            <%= link_to "ログイン", '#', class:"login header-link" %>
+            <%= link_to "About", '#', class:"header-link" %>
+            <%= link_to "投稿する", '#', class:"header-link" %>
+            <%= link_to "投稿を見る", '#', class:"header-link" %>
+            <%= link_to "お問い合わせ", '#', class:"header-link" %>
+          </div>
+        <%# end %>
+      </div>
+    </header>
     <%= yield %>
   </body>
 </html>
