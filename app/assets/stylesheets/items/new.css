@@ -1,0 +1,61 @@
+.new-tweet-form {
+  background-color:rgb(239,237,237,67);
+  height:1000px;
+  width: 50vw;
+  margin: 120px auto 0px;
+  box-shadow: 20px 30px #858443;
+  border-radius: 10px;
+}
+
+.new-tweet-form h1 {
+  font-family: 'Rampart One', cursive;
+  font-size: 60px;
+  text-align: center;
+  color:#858443;
+  padding-top: 50px;
+}
+/*  ここから　*/
+.new-form-content {
+  color: block;
+  background-color: #fff;
+  opacity: 0.7;
+  border-radius: 2px;
+  width: 80%;
+  margin: 20px auto 0px;
+  margin-left: 10%;
+  border: none;
+  font-family: 'Zen Kurenaido', sans-serif;
+  font-size: 20px;
+}
+
+.form-title {
+  height: 100px;
+  margin-top: 40px;
+}
+
+.image-file {
+  margin: 50px auto 0px;
+  margin-left: 40%;
+  color: #858443;
+  font-family: 'Zen Kurenaido', sans-serif;
+  font-size: 15px;
+}
+
+.share-btn {
+  width: 80%;
+  font-family: 'Rampart One', cursive;
+  background-color: #858443;
+  color: #fff;
+  border: none;
+  height: 80px;
+  font-size: 50px;
+  border-radius: 5px;
+  margin-top: 80px;
+  margin-left: 10%;
+  transition: all 0.5s;
+}
+
+.share-btn:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  border:1px #858443 solid;
+}
