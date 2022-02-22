@@ -9,7 +9,7 @@
 
 .new-tweet-form h1 {
   font-family: 'Rampart One', cursive;
-  font-size: 60px;
+  font-size: 50px;
   text-align: center;
   color:#858443;
   padding-top: 50px;
@@ -38,7 +38,7 @@
   margin-left: 40%;
   color: #858443;
   font-family: 'Zen Kurenaido', sans-serif;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .share-btn {
@@ -58,4 +58,5 @@
 .share-btn:hover {
   background-color: rgba(255, 255, 255, 0.5);
   border:1px #858443 solid;
+  padding: auto,0px;
 }
