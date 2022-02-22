@@ -7,7 +7,8 @@
 
 <div class="back-body">
   <div class="registaration-form">
-    <%= form_with model: @user, url:user_registration_path , local: true do |f| %>
+    <%= form_with model: @user, url:user_registration_path , local: true do |f| %>]
+    <%= render 'shared/error_messages', model: f.object %>
         <%= f.text_area :nickname, autofocus: true, placeholder:"Nick Name", class:"sign-up-place text-area" %>
         <%= f.email_field :email, autofocus: true, placeholder:"E-mail", class:"sign-up-place text-area" %>
         <%= f.password_field :password, placeholder:"PASSWORD(6文字以上)", class:"sign-up-place password" %>
