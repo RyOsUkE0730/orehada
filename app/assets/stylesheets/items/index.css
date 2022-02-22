@@ -181,8 +181,9 @@ a {
 }
 .middle-text {
   font-size: 60px;
-  padding-top: 250px;
+  padding-top: 280px;
   padding-left: 180px;
+  color: #4b4b4b
 }
 .middle-text h1 {
   font-weight: bold;
@@ -204,8 +205,6 @@ a {
       transform: translateY(15px);
     }
   }
-
-
 .show-tweet img {
   height:100px;
   width: 100px;

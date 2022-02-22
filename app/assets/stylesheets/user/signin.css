@@ -38,27 +38,28 @@ body{
   opacity: 0.7;
 }
 
-.sign-up-text{
+.sign-in-text{
   position: absolute;
   top: calc(40% - 35px);
-  left: calc(45% - 255px);
+  left: calc(40% - 255px);
   z-index: 2;
 }
 
-.sign-up-text div{
+.sign-in-text div{
   float: left;
   color: #fff;
   font-family: 'Exo', sans-serif;
-  font-size: 35px;
+  font-size: 45px;
   font-weight: 200;
 }
 
-.sign-up-text div span{
-  font-size: 40px;
+.sign-in-text div span{
+  color: #5379fa !important;
+  font-size: 50px;
   font-weight: bold;
 }
 
-.registaration-form {
+.session-form {
   position: absolute;
   top: calc(40% - 75px);
   left: calc(50% - 50px);

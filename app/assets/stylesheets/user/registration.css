@@ -41,7 +41,7 @@ body{
 .sign-up-text{
   position: absolute;
   top: calc(40% - 35px);
-  left: calc(50% - 255px);
+  left: calc(40% - 255px);
   z-index: 2;
 }
 
@@ -49,13 +49,13 @@ body{
   float: left;
   color: #fff;
   font-family: 'Exo', sans-serif;
-  font-size: 35px;
+  font-size: 45px;
   font-weight: 200;
 }
 
 .sign-up-text div span{
   color: #5379fa !important;
-  font-size: 40px;
+  font-size: 55px;
   font-weight: bold;
 }
 
