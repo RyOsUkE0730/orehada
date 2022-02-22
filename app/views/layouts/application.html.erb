@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Orehada</title>
+    <title>OREHADA 男性向け化粧品まとめサイト</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -27,7 +27,7 @@
           <%#/div>
         <%# else %>
           <div class="header-right">
-            <%= link_to "ログイン", '#', class:"login header-link" %>
+            <%= link_to "ログイン", new_user_session_path, class:"login header-link" %>
             <%= link_to "About", '#', class:"header-link" %>
             <%= link_to "投稿する", '#', class:"header-link" %>
             <%= link_to "投稿を見る", '#', class:"header-link" %>
