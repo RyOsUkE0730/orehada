@@ -1,0 +1,11 @@
+<div class="item video-box-wrapper">
+  <div class="img-preview">
+    <%# img src="https://images.unsplash.com/photo-1532673492-1b3cdb05d51b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2167&q=80" alt="video" #%>
+    <%= image_tag @dry.image %>
+  </div>
+  <div class="video-description-wrapper">
+    <p class="video-description-header"><%= @dry.title %></p>
+    <%#p class="video-description-subheader"><%= @dry.</p><#%>
+    <p class="video-description-info"><%= @dry.explanation %></p>
+  </div>
+</div>

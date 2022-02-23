@@ -1,0 +1,28 @@
+<li class='tweet-list'>
+  <%= link_to "#" do %>
+  <%#= link_to item_path(item.id) do %>
+  <div class='tweet-info'>
+      <div class='item-img-content'>
+        <%= image_tag item.image.variant(resize:'250x250'), class: "item-img" %>
+      </div>
+    </div>
+  <% end %>
+</li>
+
+<!--    
+      <div class="poster">
+        <%= "#{item.user.nickname}さんの投稿" %>
+      </#div>
+      <div class="tweet-text-space">
+        <h2 class='tweet-title'>
+          <%= item.title %>
+        </h2>
+        <h2 class='tweet-genre'>
+          <%= item.genre.name %>
+        </h2>
+        <h3 class='tweet-explanation'>
+          <%= item.explanation %>
+        </h3>
+      </div>
+
+       -->

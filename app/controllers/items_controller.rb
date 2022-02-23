@@ -4,6 +4,10 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.all
+    @dry = Item.where(genre_id:1)
+    @oily = Item.where(genre_id:2)
+    @nikibi = Item.where(genre_id:3)
+    @rankup = Item.where(genre_id:4)
   end
 
   def new
