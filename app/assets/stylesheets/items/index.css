@@ -332,7 +332,7 @@ input[type=text] {
 
 .action-buttons-wrapper {
   padding: 0 40px;
-  justify-content: :center;
+  justify-content: center;
   display: flex;
   color: black;
 }
