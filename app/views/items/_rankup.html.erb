@@ -3,7 +3,7 @@
     <%= image_tag rankup.image %>
   </div>
   <div class="tweet-description-wrapper">
-    <p class="tweet-description-subheader">OneRankUp</p>
+    <%= link_to "もっと見る", item_path(rankup.id), class:"tweet-description-subheader" %>
     <p class="tweet-description-header"><%= rankup.title %></p>
     <p class="tweet-description-info"><%= rankup.explanation %></p>
   </div>

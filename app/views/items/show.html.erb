@@ -1,14 +1,25 @@
-<% if user_signed_in? && current_user.id == @item.user_id %>
-  <%= link_to "削除", item_path(@item.id), method: :delete, class:"item-destroy" %>
-<% end %>
+<div class="show-box">
+    <%= link_to root_path, class:"item-destroy" do %>
+      <img src="/images/home.png", class="item-destroy" >
+    <% end%>
+  <% if user_signed_in? && current_user.id == @item.user_id %>
+    <div class="dust-box-show">
+      <%= link_to item_path(@item.id), method: :delete, class:"item-destroy" do %>
+        <img src="/images/dust-box.png", class="item-destroy" >
+      <% end%>
+  <% end %>
+</div>
 
-<div class="item tweet-box-wrapper">
-  <div class="img-preview">
-    <%= image_tag @item.image %>
+<div class="owl-carousel-show">
+  <div class="tweet-box-wrapper-show">
+    <div class="img-preview-show">
+      <%= image_tag @item.image %>
+    </div>
+    <div class="tweet-description-wrapper-show">
+      <p class="tweet-description-subheader-show"><%= @item.genre.name %></p>
+      <p class="tweet-description-header-show"><%= @item.title %></p>
+      <p class="tweet-description-info-show"><%= @item.explanation %></p>
+    </div>
   </div>
-  <div class="tweet-description-wrapper">
-    <p class="tweet-description-subheader"><%= @item.genre.name %></p>
-    <p class="tweet-description-header"><%= @item.title %></p>
-    <p class="tweet-description-info"><%= @item.explanation %></p>
-  </div>
+</div>
 </div>
