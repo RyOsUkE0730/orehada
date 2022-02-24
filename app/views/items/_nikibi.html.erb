@@ -3,7 +3,7 @@
     <%= image_tag nikibi.image %>
   </div>
   <div class="tweet-description-wrapper">
-    <p class="tweet-description-subheader">ニキビ肌</p>
+    <%= link_to "もっと見る", item_path(nikibi.id), class:"tweet-description-subheader" %>
     <p class="tweet-description-header"><%= nikibi.title %></p>
     <p class="tweet-description-info"><%= nikibi.explanation %></p>
   </div>

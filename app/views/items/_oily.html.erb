@@ -3,7 +3,7 @@
     <%= image_tag oily.image %>
   </div>
   <div class="tweet-description-wrapper">
-    <p class="tweet-description-subheader">オイリー肌</p>
+    <%= link_to "もっと見る", item_path(oily.id), class:"tweet-description-subheader" %>
     <p class="tweet-description-header"><%= oily.title %></p>
     <p class="tweet-description-info"><%= oily.explanation %></p>
   </div>
