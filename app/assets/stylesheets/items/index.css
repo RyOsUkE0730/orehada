@@ -3,18 +3,6 @@
   outline: none;
 }
 
-%flex {
-  display: flex;
-  align-items: center;
-}
-
-$primary-font-color: #232428;
-$secondary-font-color: #adadad;
-$active-color: #499d77;
-
-$green-dark: #51a380;
-$green-light: #e6f1ed;
-
 body {
   margin: 0;
   justify-content: center;
@@ -26,11 +14,14 @@ body {
   font-family: 'DM Sans', sans-serif;;
   font-size: 12px;
   background: linear-gradient(to top, #be93c5, #7bc6cc);
-  
-  @media screen and (max-width: 900px) {
-    & { padding: 0; }
+}
+
+body  @media screen and (max-width: 900px) {
+  & { 
+    padding: 0; 
   }
 }
+
 
 button {
   border: none;
@@ -74,11 +65,11 @@ input[type=text] {
   0 10px 80px rgba(0, 0, 0, 0.04);
   overflow: hidden;
   display: flex;
-  
-  @media screen and (max-width: 900px) {
+}
+.app-wrapper  @media screen and (max-width: 900px) {
     & { border-radius: none; }
   }
-}
+
 
 .left-area {
   max-width:10vw;
@@ -87,17 +78,17 @@ input[type=text] {
   flex-direction: column;
   height: 100%;
   padding-bottom: 20px;
-  
-  &.hide-on-mobile {
+}
+.left-area .hide-on-mobile {
     transition: all .6s linear;
-    
-    @media screen and (max-width: 900px) {
-      & {
-        left: -100%;
-        opacity: 0;
-      }
-    }
+}
+
+.left-area .hide-on-mobile @media screen and (max-width: 900px) {
+  & {
+  left: -100%;
+  opacity: 0;
   }
+}
   
   @media screen and (max-width: 900px) {
     & {
@@ -110,7 +101,6 @@ input[type=text] {
       border-right: none;
     }
   }
-}
 
 .app-header {
   font-size: 12px;
@@ -201,25 +191,6 @@ input[type=text] {
 
 .list-header line { 
   stroke: #fff; 
-}
-
-.btn-invite {
-  background-color: $active-color;
-  border: none;
-  color: #fff;
-  border-radius: 4px;
-  padding: 10px;
-  font-size: 14px;
-  line-height: 20px;
-  width: 100%;
-  max-width: 160px;
-  margin: 0 auto;
-  display: block;
-  margin-top: auto;
-  
-  &:hover {
-    background-color: darken($active-color,4%);
-  }
 }
 
 .left-area-content {
@@ -377,9 +348,11 @@ input[type=text] {
     margin: 0 2px;
     opacity: 0.5;
     padding: 0;
-    
-    &.active { opacity: 1; }
-  }
+}
+
+.owl-dot .active { 
+  opacity: 1; 
+}
 
 .owl-nav {
   position: absolute;
