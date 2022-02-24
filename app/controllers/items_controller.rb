@@ -1,13 +1,12 @@
 class ItemsController < ApplicationController
   before_action :move_to_index, except: :index
 
-
   def index
     @items = Item.all
-    @dry = Item.where(genre_id:1)
-    @oily = Item.where(genre_id:2)
-    @nikibi = Item.where(genre_id:3)
-    @rankup = Item.where(genre_id:4)
+    @dry = Item.where(genre_id: 1).order('id ASC').limit(7)
+    @oily = Item.where(genre_id: 2).order('id ASC').limit(7)
+    @nikibi = Item.where(genre_id: 3).order('id ASC').limit(7)
+    @rankup = Item.where(genre_id: 4).order('id ASC').limit(7)
   end
 
   def new
