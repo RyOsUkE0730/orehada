@@ -236,9 +236,7 @@ input[type=text] {
 }
 
   @media screen and (max-width: 900px) {
-    & {
       max-width: 100%;
-    }
   }
 
 .right-area-upper {
