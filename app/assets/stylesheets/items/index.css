@@ -80,16 +80,18 @@ input[type=text] {
   height: 100%;
   padding-bottom: 20px;
 }
-.left-area .hide-on-mobile {
-    transition: all .6s linear;
-}
 
-.left-area .hide-on-mobile @media screen and (max-width: 900px) {
-  & {
-  left: -100%;
-  opacity: 0;
+.left-area .hide-on-mobile {
+  transition: all .6s linear;
+  @media screen and (max-width: 900px) {
+    & {
+    left: -100%;
+    opacity: 0;
+    }
   }
 }
+
+
   
   @media screen and (max-width: 900px) {
     & {
@@ -165,7 +167,7 @@ input[type=text] {
 
 .list-header {
   font-size: 12px;
-  color: $secondary-font-color;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -173,7 +175,7 @@ input[type=text] {
   margin: 10px 0;
   transition: all .2s ease-in;
   cursor: pointer;
-  background-color: lighten($secondary-font-color,30%);
+  background-color: lighten(white,30%);
 }
 
 .list-header svg { 
@@ -187,7 +189,6 @@ input[type=text] {
   
 .list-header:hover svg {
     transition: all .2s ease-in; 
-    fill: $secondary-font-color;
 }
 
 .list-header line { 
@@ -205,11 +206,12 @@ input[type=text] {
   flex-direction: column;
   width: 100%;
   max-width: calc(100% - 190px);
-}
 
   @media screen and (max-width: 900px) {
-      max-width: 100%;
+    max-width: 100%;
   }
+}
+
 
 .right-area-upper {
   width: 100%;
@@ -217,11 +219,7 @@ input[type=text] {
   display: flex;
   max-height: 80px;
   padding: 0 20px;
-  
-  .menu-button {
-    display: none;
-  }
-  
+
   @media screen and (max-width: 900px) {
     & {
       .menu-button {
@@ -229,11 +227,15 @@ input[type=text] {
       }
     }
   }
-  
+
   @media screen and (max-width: 520px) {
     & { padding: 0 10px; }
   }
 }
+  
+.right-area-upper .menu-button {
+    display: none;
+  }
 
 .search-input {
   flex: 1;
@@ -257,7 +259,7 @@ input[type=text] {
 }
 
 .search-input {
-    color: $primary-font-color;
+    color: white;
     font-size: 14px;
     font-weight: 500;
   }
@@ -514,14 +516,13 @@ img {
     font-size: 8px;
     margin: 4px 0;
     color: gray;
-  }
 
-
-@media screen and (max-width: 768px) {
-  .action-buttons-wrapper {
-    display: none;
+    @media screen and (max-width: 768px) {
+      .action-buttons-wrapper {
+        display: none;
+      }
+    }
   }
-}
 
 #owl-slider-1 .hero-img-wrapper img{
     display: block;
