@@ -205,18 +205,6 @@ input[type=text] {
   display: flex;
   max-height: 80px;
   padding: 0 20px;
-
-  @media screen and (max-width: 900px) {
-    & {
-      .menu-button {
-        display: block;
-      }
-    }
-  }
-
-  @media screen and (max-width: 520px) {
-    & { padding: 0 10px; }
-  }
 }
   
 .right-area-upper .menu-button {
@@ -357,9 +345,11 @@ input[type=text] {
   background-position: center;
   background-repeat: no-repeat;
   transition: all .2s ease-in;
-  
-  span { display: none; }
 }
+.owl-nav button span { 
+  display: none; 
+}
+
 
 .owl-nav button:hover {
     background-color: lighten(green,6%);
