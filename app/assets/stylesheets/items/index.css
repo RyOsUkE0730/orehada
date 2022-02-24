@@ -14,11 +14,11 @@ body {
   font-family: 'DM Sans', sans-serif;;
   font-size: 12px;
   background: linear-gradient(to top, #be93c5, #7bc6cc);
-}
 
-body  @media screen and (max-width: 900px) {
-  & { 
-    padding: 0; 
+  @media screen and (max-width: 900px) {
+    & { 
+      padding: 0; 
+    }
   }
 }
 
