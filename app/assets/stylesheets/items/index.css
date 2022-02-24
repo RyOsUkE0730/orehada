@@ -91,20 +91,6 @@ input[type=text] {
   }
 }
 
-
-  
-  @media screen and (max-width: 900px) {
-    & {
-      position: absolute;
-      background-color: #fff;
-      z-index: 2;
-      left: 0;
-      opacity: 1;
-      box-shadow: 4px 0px 4px 0px rgba(222,222,222,0.3);
-      border-right: none;
-    }
-  }
-
 .app-header {
   font-size: 12px;
   font-weight: bold;
