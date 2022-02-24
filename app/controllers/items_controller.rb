@@ -1,9 +1,12 @@
 class ItemsController < ApplicationController
-  before_action :move_to_index, except: :index
-
+  before_action :move_to_index, except: [:index, :show]
 
   def index
     @items = Item.all
+    @dry = Item.where(genre_id: 1).order('id ASC').limit(7)
+    @oily = Item.where(genre_id: 2).order('id ASC').limit(7)
+    @nikibi = Item.where(genre_id: 3).order('id ASC').limit(7)
+    @rankup = Item.where(genre_id: 4).order('id ASC').limit(7)
   end
 
   def new
@@ -20,16 +23,22 @@ class ItemsController < ApplicationController
     end
   end
 
+  def show
+    @item = Item.find(params[:id])
+  end
 
   private
+
   def move_to_index
-    unless user_signed_in?
-      redirect_to action: :index
-    end
+    redirect_to action: :index unless user_signed_in?
   end
 
   def item_params
     params.require(:item).permit(:title, :explanation, :genre_id, :image)
-    .merge(user_id: current_user.id)
+          .merge(user_id: current_user.id)
+  end
+
+  def move_to_index
+    redirect_to new_user_session_path unless user_signed_in?
   end
 end

@@ -1,0 +1,14 @@
+<% if user_signed_in? && current_user.id == @item.user_id %>
+  <%= link_to "削除", item_path(@item.id), method: :delete, class:"item-destroy" %>
+<% end %>
+
+<div class="item tweet-box-wrapper">
+  <div class="img-preview">
+    <%= image_tag @item.image %>
+  </div>
+  <div class="tweet-description-wrapper">
+    <p class="tweet-description-subheader"><%= @item.genre.name %></p>
+    <p class="tweet-description-header"><%= @item.title %></p>
+    <p class="tweet-description-info"><%= @item.explanation %></p>
+  </div>
+</div>

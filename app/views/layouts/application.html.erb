@@ -6,39 +6,15 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= javascript_pack_tag 'application'%>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&family=Zen+Kurenaido&display=swap" rel="stylesheet">
   </head>
 
   <body>
-    <header>
-      <div class="header-wrapper">
-        <div class="header-left">
-          <%= link_to image_tag("icon/icon.png", class: :logo), root_path %>
-        </div>
-        <% if user_signed_in? %>
-          <div class="header-right" >
-            <%= link_to "HELLO! #{current_user.nickname}!!", "#", class: "header-link" %></li>
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"login header-link" %>
-            <%= link_to "About", '#', class:"header-link" %>
-            <%= link_to "投稿する", new_item_path, class:"header-link" %>
-            <%= link_to "投稿を見る", '#', class:"header-link" %>
-            <%= link_to "お問い合わせ", '#', class:"header-link" %>
-          </div>
-        <% else %>
-          <div class="header-right">
-            <%= link_to "ログイン", new_user_session_path, class:"login header-link" %>
-            <%= link_to "About", '#', class:"header-link" %>
-            <%= link_to "投稿を見る", '#', class:"header-link" %>
-            <%= link_to "お問い合わせ", '#', class:"header-link" %>
-          </div>
-        <% end %>
-      </div>
-    </header>
     <%= yield %>
   </body>
 </html>
