@@ -1,15 +1,13 @@
 .owl-carousel-show {
   position: relative;
-  width: 60%;
-  height: 60%;
   display: flex;
   align-items: center;
   padding-bottom: 8px;
 }
 
 .tweet-box-wrapper-show {
-  width: 50%;
-  height: 50%;
+  width: 40vw;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -65,5 +63,6 @@
 }
 
 .show-box {
-  padding: auto;
+  padding: 0 auto;
+  overflow: scroll;
 }

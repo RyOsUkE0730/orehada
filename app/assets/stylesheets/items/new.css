@@ -12,6 +12,7 @@
   box-shadow: 20px 30px #858443;
   border-radius: 10px;
   display: block;
+  overflow: scroll;
 }
 
 .new-tweet-form h1 {
