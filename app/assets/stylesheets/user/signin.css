@@ -1,17 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Exo:100,200,400);
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
 
-body{
-  margin: 0;
-  padding: 0;
-  background: #fff;
-
-  color: #fff;
-  font-family: Arial;
-  font-size: 12px;
-}
-
-.body{
+.session-body{
   position: absolute;
   top: -20px;
   left: -20px;
@@ -63,15 +53,13 @@ body{
   position: absolute;
   top: calc(40% - 75px);
   left: calc(50% - 50px);
-  height: 150px;
-  width: 350px;
+  height: 180px;
+  width: 300px;
   padding: 25px;
   padding-top: 40px;
   z-index: 2;
-  background-color: #CCEAE7;
+  background-color: #7be9de;
   opacity: 0.7;
-  height: 180px;
-  width: 270px;
   border-radius: 10px;
 }
 

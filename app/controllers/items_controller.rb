@@ -8,6 +8,7 @@ class ItemsController < ApplicationController
     @oily = Item.where(genre_id: 2).order('id ASC').limit(7)
     @nikibi = Item.where(genre_id: 3).order('id ASC').limit(7)
     @rankup = Item.where(genre_id: 4).order('id ASC').limit(7)
+    @user = User.find(current_user.id) if user_signed_in?
   end
 
   def new

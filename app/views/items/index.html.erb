@@ -6,7 +6,7 @@
     <div class="left-area-content">
       <div class="profile">
       <% if user_signed_in? %>
-        <img src="/images/AREmoji_20211205_113623_61707.jpg" alt="no image" class="profile-image">
+        <%= image_tag @user.avatar.url,class: "profile-image" %>
         <div class="profile-info">
           <span class="profile-name"><%= "#{current_user.nickname}" %></span>
         </div>
