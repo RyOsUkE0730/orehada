@@ -4,10 +4,10 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.all
-    @dry = Item.where(genre_id: 1).order('id DESC').limit(7)
-    @oily = Item.where(genre_id: 2).order('id DESC').limit(7)
-    @nikibi = Item.where(genre_id: 3).order('id DESC').limit(7)
-    @rankup = Item.where(genre_id: 4).order('id DESC').limit(7)
+    @dry = Item.where(genre_id: 1).order('id DESC').limit(6)
+    @oily = Item.where(genre_id: 2).order('id DESC').limit(6)
+    @nikibi = Item.where(genre_id: 3).order('id DESC').limit(6)
+    @rankup = Item.where(genre_id: 4).order('id DESC').limit(6)
     @user = User.find(current_user.id) if user_signed_in?
   end
 
