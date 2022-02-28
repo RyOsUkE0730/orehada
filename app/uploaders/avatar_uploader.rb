@@ -27,9 +27,9 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # def scale(width, height)
   #   # do something
   # end
-  def default_url
-    'no-image.png'
-  end
+  #def default_url
+  #  'no-image.png'
+  #end
 
   # Create different versions of your uploaded files:
   # version :thumb do
