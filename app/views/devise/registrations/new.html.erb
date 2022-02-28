@@ -1,4 +1,4 @@
-  <div class="body"></div>
+  <div class="registaration-body"></div>
     <div class="grad"></div>
     <div class="sign-up-text">
       <div>WELCOME!<br><span>OREHADA</span></div>
@@ -13,7 +13,9 @@
         <%= f.email_field :email, autofocus: true, placeholder:"E-mail", class:"sign-up-place text-area" %>
         <%= f.password_field :password, placeholder:"PASSWORD(6文字以上)", class:"sign-up-place password" %>
         <%= f.password_field :password_confirmation, placeholder:"同じパスワードを入力して下さい", class:"sign-up-place password" %>
-        <%= f.submit "Sign Up" ,class:"sign-up-btn" %>>
+        <p class="setting-profile-text">※プロフィール画像を設定してください</p>
+        <%= f.file_field :avatar, placeholder:"プロフィール画像を設定してください",class:"sign-up-place" %>
+        <%= f.submit "Sign Up" ,class:"sign-up-btn" %>
     <% end %>
   </div>
 </div>
