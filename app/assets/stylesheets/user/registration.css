@@ -11,7 +11,7 @@ body{
   font-size: 12px;
 }
 
-.body{
+.registaration-body{
   position: absolute;
   top: -20px;
   left: -20px;
@@ -47,30 +47,33 @@ body{
 
 .sign-up-text div{
   float: left;
-  color: #fff;
+  color: white;
   font-family: 'Exo', sans-serif;
   font-size: 45px;
   font-weight: 200;
 }
 
 .sign-up-text div span{
-  color: #5379fa !important;
+  color: #5379fa;
   font-size: 55px;
   font-weight: bold;
 }
 
+.setting-profile-text{
+  color: #5379fa;
+  padding:5px 0 5px;
+}
+
 .registaration-form {
   position: absolute;
-  top: calc(40% - 75px);
-  left: calc(50% - 50px);
-  height: 150px;
-  width: 350px;
+  top: calc(40% - 60px);
+  left: calc(50% - 40px);
+  height: 300px;
+  width: 300px;
   padding: 25px;
   z-index: 2;
-  background-color: #CCEAE7;
-  opacity: 0.7;
-  height: 250px;
-  width: 270px;
+  background-color: #7be9de;
+  opacity: 0.8;
   border-radius: 10px;
 }
 
@@ -80,7 +83,7 @@ body{
   background: transparent;
   border: 1px solid rgba(255,255,255,0.6);
   border-radius: 2px;
-  color: #fff;
+  color: black;
   font-family: 'Exo', sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -93,7 +96,7 @@ body{
   background: transparent;
   border: 1px solid rgba(255,255,255,0.6);
   border-radius: 2px;
-  color: #fff;
+  color: black;
   font-family: 'Exo', sans-serif;
   font-size: 16px;
   font-weight: 400;
