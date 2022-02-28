@@ -5,16 +5,25 @@
     </div>
     <div class="left-area-content">
       <div class="profile">
-      <% if user_signed_in? %>
-        <%= image_tag @user.avatar.url,class: "profile-image" %>
+
+      <% if user_signed_in? && @user.avatar.present?%>
+        <%= image_tag @user.avatar.url, class: "profile-image" %>
         <div class="profile-info">
           <span class="profile-name"><%= "#{current_user.nickname}" %></span>
         </div>
+
+      <% elsif user_signed_in? && @user.avatar.blank?%>
+        <%= image_tag ('/images/no-image.jpeg'), class: "profile-image" %>
+        <div class="profile-info">
+          <span class="profile-name"><%= "#{current_user.nickname}" %></span>
+        </div>
+
       <% else %>
         <div class="profile-info">
           <span class="profile-name">ログインして<br>投稿をしよう！</span>
         </div>
       <% end %>
+
           <!-- span class="country">Country</span -->
       </div>
       <div class="page-link-list">
