@@ -49,7 +49,10 @@
   <div class="right-area">
     <div class="right-area-upper">
       <div class="search-part-wrapper">
-        <input class="search-input" type="text" placeholder="投稿を検索する">
+      <form action="#" method="get">
+        <input class="search-input" type="search" placeholder="投稿を検索する">
+        <input type="submit" name="submit" value="検索" class="kensaku-btn">
+      </form>
       </div>
       <div class="action-buttons-wrapper">
         <% if user_signed_in? %>
