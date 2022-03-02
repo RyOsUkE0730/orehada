@@ -8,18 +8,25 @@
         <img src="/images/dust-box.png", class="item-destroy" >
       <% end%>
   <% end %>
-</div>
 
-<div class="owl-carousel-show">
-  <div class="tweet-box-wrapper-show">
-    <div class="img-preview-show">
-      <%= image_tag @item.image %>
-    </div>
-    <div class="tweet-description-wrapper-show">
-      <p class="tweet-description-subheader-show"><%= @item.genre.name %></p>
-      <p class="tweet-description-header-show"><%= @item.title %></p>
-      <p class="tweet-description-info-show"><%= @item.explanation %></p>
+  <h3>いいね件数: <%= @item.likes.count %></h3>
+    <% if current_user.already_liked?(@item) %>
+      <%= button_to 'いいねを取り消す', item_like_path(@item), method: :delete %>
+    <% else %>
+      <%= button_to 'いいね', item_likes_path(@item) %>
+    <% end %>
+  </div>
+
+  <div class="owl-carousel-show">
+    <div class="tweet-box-wrapper-show">
+      <div class="img-preview-show">
+        <%= image_tag @item.image %>
+      </div>
+      <div class="tweet-description-wrapper-show">
+        <p class="tweet-description-subheader-show"><%= @item.genre.name %></p>
+        <p class="tweet-description-header-show"><%= @item.title %></p>
+        <p class="tweet-description-info-show"><%= @item.explanation %></p>
+      </div>
     </div>
   </div>
-</div>
 </div>
