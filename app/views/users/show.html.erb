@@ -1,6 +1,8 @@
 <h1>ユーザー詳細ページ</h1>
 <h2>投稿内容</h2>
+<div id="owl-slider-2" class="slider-wrapper owl-carousel">
 <% @user.items.each do |item| %>
+<!--
   <div class="owl-carousel-show">
     <div class="tweet-box-wrapper-show">
         <div class="tweet-description-wrapper-show">
@@ -8,9 +10,25 @@
         <p class="tweet-description-header-show"><%= item.title %></p>
         <p class="tweet-description-info-show"><%= item.explanation %></p>
       </div>
-          </div>
+    </div>
   </div>
+-->
+  <div class="item tweet-box-wrapper">
+    <div class="img-preview">
+      <%= image_tag item.image %>
+    </div>
+  <div class="tweet-description-wrapper">
+    <%= link_to "もっと見る", item_path(item.id), class:"tweet-description-subheader" %>
+    <p class="tweet-description-header"><%= item.title %></p>
+    <p class="tweet-description-info"><%= item.explanation %></p>
+  </div>
+</div>
 <% end %>
+</div>
+
+
+
+
 <h3>いいねしている投稿</h3>
 <% @user.liked_items.each do |item| %>
   <div class="owl-carousel-show">
