@@ -14,11 +14,12 @@
         </div>
         <% end %>
       <% elsif user_signed_in? && @user.avatar.blank?%>
+        <%= link_to user_path(@user.id) do %>
         <%= image_tag ('/images/no-image.jpeg'), class: "profile-image" %>
         <div class="profile-info">
           <span class="profile-name"><%= "#{current_user.nickname}" %></span>
         </div>
-
+        <% end %>
       <% else %>
         <div class="profile-info">
           <span class="profile-name">ログインして<br>投稿をしよう！</span>
@@ -54,8 +55,8 @@
       </div>
       <div class="action-buttons-wrapper">
         <% if user_signed_in? %>
-          <%= link_to destroy_user_session_path, method: :delete, class: "action-buttons-out" do %>
-            <img src="images/login.png">
+          <%= link_to destroy_user_session_path, method: :delete, class: "action-buttons" do %>
+            <img src="images/logout.png">
           <% end %>
         <% else %>
           <%= link_to new_user_session_path, class: "action-buttons" do %>
