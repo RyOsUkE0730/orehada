@@ -14,13 +14,7 @@ body {
   font-family: 'DM Sans', sans-serif;;
   font-size: 12px;
   background: linear-gradient(to top, #be93c5, #7bc6cc);
-
-  @media screen and (max-width: 900px) {
-    & { 
-      padding: 0; 
-    }
   }
-}
 
 
 button {
@@ -95,16 +89,11 @@ input[type=text] {
   font-size: 12px;
   font-weight: bold;
   color: #858443;
-  padding: 20px 20px 20px 10px;
+  padding: 20px 0px 20px 0px;
   border-bottom: 1px solid #ddd;
   position: relative;
 }
 
-.logo-image  {
-  padding-top: 10px;
-  width: 100px;
-  height: 50px;
-}
 
 .profile {
   display: flex;
@@ -256,16 +245,12 @@ input[type=text] {
 
 .action-buttons {
   color: black;
-  width: 40px;
-  max-height: 10px;
   margin: 10px 20px 0px;
   font-size: 2px;
 }
 
 .action-buttons-new {
   color: black;
-  width: 40px;
-  max-height: 10px;
   margin: 1px 20px 0px;
   font-size: 2px;
 }

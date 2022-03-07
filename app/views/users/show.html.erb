@@ -1,0 +1,43 @@
+<div class="user_show_contents"> 
+  <h1 class="user_show-title">My Page</h1>
+  <h2 class="user_show-con-title">投稿内容</h2>
+  <div class="user_show_content">
+    <% @user.items.each do |item| %>
+<!--
+  <div class="owl-carousel-show">
+    <div class="tweet-box-wrapper-show">
+        <div class="tweet-description-wrapper-show">
+        <p class="tweet-description-subheader-show"><%= item.genre.name %></p>
+        <p class="tweet-description-header-show"><%= item.title %></p>
+        <p class="tweet-description-info-show"><%= item.explanation %></p>
+      </div>
+    </div>
+  </div>
+
+    <div class="img-preview-user">
+      <%= image_tag item.image %>
+    </div>
+    -->
+      <div class="tweet-description-wrapper-user">
+        <%= link_to "詳細を見る", item_path(item.id), class:"tweet-description-subheader-user" %>
+        <p class="tweet-description-subheader-user">投稿ジャンル：<%= item.genre.name %></p>
+        <p class="tweet-description-header-user"><%= item.title %></p>
+        <p class="tweet-description-info-user"><%= item.explanation %></p>
+      </div>
+    <% end %>
+  </div>
+
+
+  <h3 class="user_show-con-title">いいねしている投稿</h3>
+  <div class="user_liked_content">
+    <% @user.liked_items.each do |item| %>
+    <div class="tweet-description-wrapper-user">
+      <%= link_to "詳細を見る", item_path(item.id), class:"tweet-description-subheader-user" %>
+      <p class="tweet-description-subheader-user">投稿ジャンル：<%= item.genre.name %></p>
+      <p class="tweet-description-header-user"><%= item.title %></p>
+      <p class="tweet-description-info-user"><%= item.explanation %></p>
+    </div>
+    <% end %>
+  </div>
+  <%= link_to "ホームへ戻る", root_path %>
+</div>
