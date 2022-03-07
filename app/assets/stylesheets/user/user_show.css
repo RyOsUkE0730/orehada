@@ -1,0 +1,45 @@
+.user_show_contents {
+  background-image: url(icon/header.jpeg);
+  background-size: cover;
+  z-index: -1;
+}
+
+.user_show-title {
+  color: black;
+  font-size: 3em;
+  margin: 50px 0 30px 80px;
+}
+
+.user_show-con-title {
+  color: black;
+  font-size: 2em;
+  margin: 50px 0 30px 80px;
+}
+
+.user_show_content {
+  display: flex;
+}
+
+
+.user_show_content{
+  margin:20px 0 0 80px;
+  overflow-Y: hidden;
+  overflow-X: scroll;
+  background-color: rgba(245,245,245,0.8);
+}
+
+.tweet-description-wrapper-user {
+  width: 20vw;
+  height: 20vh;
+  color: black;
+  padding: 40px 24px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.user_liked_content {
+  margin:20px 0 0 80px;
+  overflow-Y: hidden;
+  overflow-X: scroll;
+  background-color: rgba(245,245,245,0.8);
+}
